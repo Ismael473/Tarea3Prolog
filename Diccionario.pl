@@ -16,7 +16,14 @@ affinity(medicina, investigacion_clinica).
 affinity(medicina, etica).
 
 affinity(ingenieria_computadores, abstraccion).
-affinity(ingenieria_computadores, logica_matematica
+affinity(ingenieria_computadores, arquitectura_hardware).
+affinity(ingenieria_computadores, progamacion).
+affinity(ingenieria_computadores, electronica).
+affinity(ingenieria_computadores, pensamiento_sistemico).
+affinity(ingenieria_computadores, automatizacion).
+affinity(ingenieria_computadores, optimizacion).
+affinity(ingenieria_computadores, curiosidad_tecnologica).
+affinity(ingenieria_computadores, logica_matematica).
 affinity(ingenieria_computadores, tecnologia).
 affinity(ingenieria_computadores, circuitos).
 affinity(ingenieria_computadores, matematicas).
@@ -29,21 +36,39 @@ affinity(economia, matematicas).
 affinity(economia, estadistica).
 affinity(economia, dinero).
 affinity(economia, inversiones).
+affinity(economia, analisis_numerico).
+affinity(economia, vision_global).
+affinity(economia, microeconomia).
+affinity(economia, finanzas).
+affinity(economia, pensamiento_estrategico).
+affinity(economia, sociologia).
+affinity(economia, modelado_matematico).
+affinity(economia, gestion_riesgos).
+affinity(economia, politica_publica).
+affinity(economia, pragmatismo).
 
 affinity(leyes, investigacion).
-affinity(leyes, lectura).
+affinity(leyes, comprension_lectora).
 affinity(leyes, personas).
 affinity(leyes, defensa).
 affinity(leyes, constitucion).
 affinity(leyes, problemas).
-affinity(leyes, 
+affinity(leyes, etica).
+affinity(leyes, etica).
+affinity(leyes, sentido_justicia).
+affinity(leyes, pensamiento_critico).
+affinity(leyes, negociacion).
+affinity(leyes, redaccion_formal).
+affinity(leyes, memoria_normativa).
+affinity(leyes, diplomacia).
+affinity(leyes, investigacion_juridica).
+affinity(leyes, persuacion).
 
-affinity(bombero, personas).
-affinity(bombero, ayuda).
-affinity(bombero, fuego).
-affinity(bombero, urgencia).
-affinity(bombero, problemas).
-affinity(bombero, condicion_fisica).
-
-
-
+affinity(artes_musicales, oido_musical).
+affinity(artes_musicales, ritmo).
+affinity(artes_musicales, destreza_motriz).
+affinity(artes_musicales, creatividad).
+affinity(artes_musicales, mente_abierta).
+affinity(artes_musicales, sensibilidad).
+affinity(artes_musicales, emotividad).
+affinity(artes_musicales, imaginativo).
