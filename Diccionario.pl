@@ -31,6 +31,7 @@ affinity(ingenieria_computadores, dinero).
 affinity(ingenieria_computadores, problemas).
 affinity(ingenieria_computadores, ciencia).
 affinity(ingenieria_computadores, investigacion).
+affinity(ingenieria_computadores, resiliencia)
 
 affinity(economia, matematicas).
 affinity(economia, estadistica).
@@ -46,6 +47,7 @@ affinity(economia, modelado_matematico).
 affinity(economia, gestion_riesgos).
 affinity(economia, politica_publica).
 affinity(economia, pragmatismo).
+affinity(economia, resiliencia).
 
 affinity(leyes, investigacion).
 affinity(leyes, comprension_lectora).
@@ -63,6 +65,7 @@ affinity(leyes, memoria_normativa).
 affinity(leyes, diplomacia).
 affinity(leyes, investigacion_juridica).
 affinity(leyes, persuacion).
+affinity(leyes, resiliencia).
 
 affinity(artes_musicales, oido_musical).
 affinity(artes_musicales, ritmo).
@@ -72,3 +75,10 @@ affinity(artes_musicales, mente_abierta).
 affinity(artes_musicales, sensibilidad).
 affinity(artes_musicales, emotividad).
 affinity(artes_musicales, imaginativo).
+affinity(artes_musicales, resiliencia).
+affinity(artes_musicales, pasion).
+affinity(artes_musicales, interpretacion).
+affinity(artes_musicales, armonia).
+affinity(artes_musicales, improvisacion).
+affinity(artes_musicales, performance).
+affinity(artes_musicales, analisis_auditivo).
