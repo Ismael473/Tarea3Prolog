@@ -1,0 +1,11 @@
+Make a target(???) relation that relates all of the analyzed parts of speech of a sentence to the target.
+    This chooses one of those parts of speech to be the target depending on what is available, the verb, etc.
+    cases:
+        The target is the adjective at the start of the noun phrase of the verb phrase (Adjective_before) if the verb is soy and there are no more words after it
+        The target is the infinitive if there is no noun phrase in the verb phrase
+        The target is the verb if there is no infinitive and no noun phrase?
+        The target is usually the noun of the noun phrase of the verb phrase otherwise.
+
+consult('C:\\Users\\esteb\\OneDrive\\Documents\\D_temp\\D\\TEC\\2026\\Semestre_1\\Paradigmas_de_Programaciones\\tarea_3\\de_github\\repositorio\\Tarea3Prolog\\logic.pl').
+consult('C:\\Users\\esteb\\OneDrive\\Documents\\D_temp\\D\\TEC\\2026\\Semestre_1\\Paradigmas_de_Programaciones\\tarea_3\\de_github\\repositorio\\Tarea3Prolog\\BNF.pl').
+

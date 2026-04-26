@@ -6,7 +6,8 @@ career(medicina).
 
 affinity(ingenieria_computadores, matematicas).
 affinity(ingenieria_computadores, tecnologia).
-affinity(ingenieria_computadores, resolver_problemas).
+% affinity(ingenieria_computadores, resolver_problemas).
+affinity(ingenieria_computadores, problemas).
 
 affinity(psicologia, personas).
 affinity(psicologia, escuchar).
@@ -16,93 +17,93 @@ affinity(medicina, biologia).
 affinity(medicina, personas).
 affinity(medicina, disciplina).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-affinity(medicina, ayuda).
-affinity(medicina, personas).
-affinity(medicina, salud).
-affinity(medicina, biologia).
-affinity(medicina, sangre).
-affinity(medicina, enfermedades).
-affinity(medicina, medicamentos).
-affinity(medicina, empatia).
-affinity(medicina, resiliencia).
-affinity(medicina, anatomia).
-affinity(medicina, altruismo).
-affinity(medicina, memoria_retentiva).
-affinity(medicina, precision).
-affinity(medicina, quimica_organica).
-affinity(medicina, investigacion_clinica).
-affinity(medicina, etica).
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% affinity(medicina, ayuda).
+% affinity(medicina, personas).
+% affinity(medicina, salud).
+% affinity(medicina, biologia).
+% affinity(medicina, sangre).
+% affinity(medicina, enfermedades).
+% affinity(medicina, medicamentos).
+% affinity(medicina, empatia).
+% affinity(medicina, resiliencia).
+% affinity(medicina, anatomia).
+% affinity(medicina, altruismo).
+% affinity(medicina, memoria_retentiva).
+% affinity(medicina, precision).
+% affinity(medicina, quimica_organica).
+% affinity(medicina, investigacion_clinica).
+% affinity(medicina, etica).
 
-affinity(ingenieria_computadores, abstraccion).
-affinity(ingenieria_computadores, arquitectura_hardware).
-affinity(ingenieria_computadores, progamacion).
-affinity(ingenieria_computadores, electronica).
-affinity(ingenieria_computadores, pensamiento_sistemico).
-affinity(ingenieria_computadores, automatizacion).
-affinity(ingenieria_computadores, optimizacion).
-affinity(ingenieria_computadores, curiosidad_tecnologica).
-affinity(ingenieria_computadores, logica_matematica).
-affinity(ingenieria_computadores, tecnologia).
-affinity(ingenieria_computadores, circuitos).
-affinity(ingenieria_computadores, matematicas).
-affinity(ingenieria_computadores, dinero).
-affinity(ingenieria_computadores, problemas).
-affinity(ingenieria_computadores, ciencia).
-affinity(ingenieria_computadores, investigacion).
-affinity(ingenieria_computadores, resiliencia).
+% affinity(ingenieria_computadores, abstraccion).
+% affinity(ingenieria_computadores, arquitectura_hardware).
+% affinity(ingenieria_computadores, progamacion).
+% affinity(ingenieria_computadores, electronica).
+% affinity(ingenieria_computadores, pensamiento_sistemico).
+% affinity(ingenieria_computadores, automatizacion).
+% affinity(ingenieria_computadores, optimizacion).
+% affinity(ingenieria_computadores, curiosidad_tecnologica).
+% affinity(ingenieria_computadores, logica_matematica).
+% affinity(ingenieria_computadores, tecnologia).
+% affinity(ingenieria_computadores, circuitos).
+% affinity(ingenieria_computadores, matematicas).
+% affinity(ingenieria_computadores, dinero).
+% affinity(ingenieria_computadores, problemas).
+% affinity(ingenieria_computadores, ciencia).
+% affinity(ingenieria_computadores, investigacion).
+% affinity(ingenieria_computadores, resiliencia).
 
-affinity(economia, matematicas).
-affinity(economia, estadistica).
-affinity(economia, dinero).
-affinity(economia, inversiones).
-affinity(economia, analisis_numerico).
-affinity(economia, vision_global).
-affinity(economia, microeconomia).
-affinity(economia, finanzas).
-affinity(economia, pensamiento_estrategico).
-affinity(economia, sociologia).
-affinity(economia, modelado_matematico).
-affinity(economia, gestion_riesgos).
-affinity(economia, politica_publica).
-affinity(economia, pragmatismo).
-affinity(economia, resiliencia).
+% affinity(economia, matematicas).
+% affinity(economia, estadistica).
+% affinity(economia, dinero).
+% affinity(economia, inversiones).
+% affinity(economia, analisis_numerico).
+% affinity(economia, vision_global).
+% affinity(economia, microeconomia).
+% affinity(economia, finanzas).
+% affinity(economia, pensamiento_estrategico).
+% affinity(economia, sociologia).
+% affinity(economia, modelado_matematico).
+% affinity(economia, gestion_riesgos).
+% affinity(economia, politica_publica).
+% affinity(economia, pragmatismo).
+% affinity(economia, resiliencia).
 
-affinity(leyes, investigacion).
-affinity(leyes, comprension_lectora).
-affinity(leyes, personas).
-affinity(leyes, defensa).
-affinity(leyes, constitucion).
-affinity(leyes, problemas).
-affinity(leyes, etica).
-affinity(leyes, etica).
-affinity(leyes, sentido_justicia).
-affinity(leyes, pensamiento_critico).
-affinity(leyes, negociacion).
-affinity(leyes, redaccion_formal).
-affinity(leyes, memoria_normativa).
-affinity(leyes, diplomacia).
-affinity(leyes, investigacion_juridica).
-affinity(leyes, persuacion).
-affinity(leyes, resiliencia).
+% affinity(leyes, investigacion).
+% affinity(leyes, comprension_lectora).
+% affinity(leyes, personas).
+% affinity(leyes, defensa).
+% affinity(leyes, constitucion).
+% affinity(leyes, problemas).
+% affinity(leyes, etica).
+% affinity(leyes, etica).
+% affinity(leyes, sentido_justicia).
+% affinity(leyes, pensamiento_critico).
+% affinity(leyes, negociacion).
+% affinity(leyes, redaccion_formal).
+% affinity(leyes, memoria_normativa).
+% affinity(leyes, diplomacia).
+% affinity(leyes, investigacion_juridica).
+% affinity(leyes, persuacion).
+% affinity(leyes, resiliencia).
 
-affinity(artes_musicales, oido_musical).
-affinity(artes_musicales, ritmo).
-affinity(artes_musicales, destreza_motriz).
-affinity(artes_musicales, creatividad).
-affinity(artes_musicales, mente_abierta).
-affinity(artes_musicales, sensibilidad).
-affinity(artes_musicales, emotividad).
-affinity(artes_musicales, imaginativo).
-affinity(artes_musicales, resiliencia).
-affinity(artes_musicales, pasion).
-affinity(artes_musicales, interpretacion).
-affinity(artes_musicales, armonia).
-affinity(artes_musicales, improvisacion).
-affinity(artes_musicales, performance).
-affinity(artes_musicales, analisis_auditivo).
+% affinity(artes_musicales, oido_musical).
+% affinity(artes_musicales, ritmo).
+% affinity(artes_musicales, destreza_motriz).
+% affinity(artes_musicales, creatividad).
+% affinity(artes_musicales, mente_abierta).
+% affinity(artes_musicales, sensibilidad).
+% affinity(artes_musicales, emotividad).
+% affinity(artes_musicales, imaginativo).
+% affinity(artes_musicales, resiliencia).
+% affinity(artes_musicales, pasion).
+% affinity(artes_musicales, interpretacion).
+% affinity(artes_musicales, armonia).
+% affinity(artes_musicales, improvisacion).
+% affinity(artes_musicales, performance).
+% affinity(artes_musicales, analisis_auditivo).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 antagonism(ingenieria_computadores, personas).
 antagonism(psicologia, matematicas).
@@ -110,7 +111,7 @@ antagonism(medicina, tecnologia).
 
 question(matematicas, "Te gustan las matematicas?").
 question(tecnologia, "Te gusta la tecnologia?").
-question(resolver_problemas, "Disfrutas de resolver problemas?").
+question(problemas, "Disfrutas de resolver problemas?").
 
 question(personas, 'Te interesan las personas?').
 question(escuchar, 'Te gusta escuchar a los demas?').

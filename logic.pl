@@ -1,4 +1,5 @@
 :- consult('BD.pl').
+% :- consult('BNF.pl').
 
 start :-
     retractall(answer(_,_)),
