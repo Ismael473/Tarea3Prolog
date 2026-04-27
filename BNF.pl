@@ -1,5 +1,8 @@
 :- consult('Logic.pl').
 
+:- discontiguous noun/3.
+:- discontiguous synonym/1.
+
 /* ---------------- Lexicon ---------------- */
 
 pronoun(yo).
@@ -10,6 +13,8 @@ reflexivePronoun(me).
 
 verb(amo, positive).
 verb(adoro, positive).
+verb(agrada, positive).
+verb(agradan, positive).
 verb(gusta, positive).
 verb(gustan, positive).
 verb(disfruto, positive).
@@ -25,11 +30,34 @@ verb(disgusta, negative).
 verb(disgustan, negative).
 
 verb(soy, positive).
+verb(considero, positive).
+
+verb(tengo, positive).
+verb(suelo, positive).
+verb(quiero, positive).
+
+verb(parece, positive).
+
+verb(oigo, positive).
+verb(escucho, positive).
+
+verb(disecar, positive).
+verb(operar, positive).
+verb(abrir, positive).
+
+verb(ordenar, positive).
+
+
     % For copulative sentences, an adjective will be allowed as the first word in the noun phrase of the verb phrase.
     % If the verb is soy, this adjective will be taken as the target and if the sentence didn't end after it an error is raised.
 
 adverb(mucho).
 adverb(muy).
+adverb(si).
+adverb(siempre).
+adverb(generalmente).
+adverb(ocasionalmente).
+adverb(frecuentemente).
 
 adverb(no).
 
@@ -66,25 +94,52 @@ determiner(unos, masculine, plural).
 % determiner_trait(biologia).
 noun(matematica, matematicas, feminine).
 noun(numero, numeros, masculine).
-synonym([matematica, numero, resolver]).
+noun(trigonometria, trigonometrias, feminine).
+noun(geometria, geometrias, feminine).
+noun(funcion, funciones, feminine).
+synonym([matematica, numero, resolver, resuelvo, trigonometria, geometria, funcion]).
 % Synonyms can include words of other types like adjectives and infinitives.
 % Synonyms are defined by their first declension according to firstDeclension/2
 
 noun(tecnologia, tecnologias, feminine).
 noun(computadora, computadoras, feminine).
-synonym([tecnologia, tecnologias, computadora, computadoras]).
+noun(hardware, hardwares, masculine).
+noun(software, softwares, masculine).
+noun(juego, juegos, masculine).
+noun(automatizacion, automatizaciones, feminine).
+noun(internet, internets, masculine).
+synonym([tecnologia, computadora, hardware, software, juego, automatizacion, internet]).
 
 noun(persona, personas, feminine).
 noun(gente, gentes, feminine).
-synonym([persona, gente]).
+noun(sociedad, sociedades, feminine).
+synonym([persona, gente, sociedad]).
 
 
-noun(biologia, biologia, feminine).
+noun(biologia, biologias, feminine).
+noun(animal, animales, masculine).
+noun(criatura, criaturas, feminine).
+noun(planta, plantas, feminine).
+noun(arbol, arboles, masculine).
+synonym([biologia, animal, criatura, planta, arbol]).
+
 
 noun(empatia, empatias, feminine).
 synonym([empatia, empatico]).
 
 noun(problema, problemas, masculine).
+
+noun(disciplina, disciplinas, feminine).
+noun(orden, ordenes, masculine).
+noun(aseo, aseos, masculine).
+noun(constancia, constancias, feminine).
+noun(perseverancia, perseverancia, masculine).
+synonym([disciplina, orden, aseo, constancia, perseverancia, disciplinado, ordenado, aseado, constante, perseverante, ordenar]).
+
+
+synonym([escuchar, escucho, oir, oigo, atento]).
+
+% synonym([escuchar, escucho, oir, oigo, atento]).
 
 
 % Arity 1 noun rule to check if a noun exists.
@@ -93,22 +148,42 @@ noun(Noun):-
 noun(Noun):-
     noun(_,Noun,_).
 
+
+
+infinitive(escuchar).
+infinitive(oir).
+infinitive(resolver).
+infinitive(hacer).
+infinitive(trabajar).
+
+infinitive(ser).
+infinitive(tener).
+infinitive(parecer).
+
+
+
+% If a verb phrase with a verb that contains an infinitive does not have a noun phrase, then the infinitive must be the target.
+
+adjective(empatico, empatica, empaticos, empaticas).
+
+adjective(demas, demas, demas, demas).
+adjective(otro, otra, otros, otras).
+
+adjective(bueno, buena, buenos, buenas).
+adjective(buen, buena, buenos, buenas).
+
+adjective(atento, atenta, atentos, atentas).
+
+adjective(disciplinado, disciplinada, disciplinados, disciplinadas).
+adjective(ordenado, ordenada, ordenados, ordenadas).
+adjective(aseado, aseada, aseados, aseadas).
+adjective(constante, constante, constantes, constantes).
+adjective(perseverante, constante, constantes, constantes).
+
+
 % Rule to get the declension of any noun.
 nounDeclension(Noun, Gender, singular) :- noun(Noun,_,Gender).
 nounDeclension(Noun, Gender, plural) :- noun(_,Noun,Gender).   
-
-% % Relates a word to any of its other declensions.
-% % For nouns if it is singular or plural it is related to its plural or singular declension.
-% % A word that is not a noun nor an adjective is related to itself.
-% otherDeclensions(NounSP, NounPS):-
-%     noun(NounSP, NounPS,_).
-% otherDeclensions(NounSP, NounPS):-
-%     noun(NounPS, NounSP,_).
-% otherDeclensions(AdjectiveM, AdjectiveF):-
-%     adjective(AdjectiveM, AdjectiveF,_,_).
-% otherDeclensions(AdjectiveF, AdjectiveM):-
-%     adjective(AdjectiveM, AdjectiveF,_,_).
-% otherDeclensions(NonNoun, NonNoun).
 
 % Relates Word to WordFirst depending on what part of speech Word is:
 % Nouns: WordFirst is the singular.
@@ -137,21 +212,6 @@ isSynonym(Synonym1, Synonym2):-
     synonym(ListOfSynonyms),
     member(Synonym1FirstDeclension, ListOfSynonyms),
     member(Synonym2, ListOfSynonyms).
-
-
-infinitive(escuchar).
-infinitive(resolver).
-infinitive(hacer).
-% If a verb phrase with a verb that contains an infinitive does not have a noun phrase, then the infinitive must be the target.
-
-adjective(empatico, empatica, empaticos, empaticas).
-
-adjective(demas, demas, demas, demas).
-adjective(otro, otra, otros, otras).
-
-adjective(bueno, buena, buenos, buenas).
-adjective(buen, buena, buenos, buenas).
-
 
 % Rule to get the declension of any adjective.
 adjectiveDeclension(Adjective, masculine, singular) :- adjective(Adjective, _, _, _).
@@ -354,13 +414,16 @@ sentenceLD(SentenceLD, NounPhrase, VerbPhrase):-
 % Sentence is a sentenceLD(Sentence, NounPhrase, VerbPhrase)
 sentenceIsGrammatical(Sentence):-
     sentenceLD(Sentence, NounPhrase, VerbPhrase),
-    nounPhraseIsGrammatical(NounPhrase),
+    % nounPhraseIsGrammatical(NounPhrase),  % The noun phrase is not analyzed
     verbPhraseIsGrammatical(VerbPhrase).
 
 
 
 % A rule that holds if declension is consistent within NounPhrase.  
 % NounPhrase is a nounPhraseLD(NounPhrase, Preposition, Determiner, Pronoun, Adjective_before, Noun, Adjective_after)
+% An empty NounPhrase is grammatical.
+nounPhraseIsGrammatical(NounPhrase):-
+    NounPhrase = [none, none, none, none, none, none, none, none].
 nounPhraseIsGrammatical(NounPhrase):-
     nounPhraseLD(NounPhrase, Preposition, Determiner, Pronoun, Adverb_before, Adjective_before, Noun, Adverb_after, Adjective_after),
     determinerAndNounAgree(Determiner, Noun),    
@@ -379,23 +442,26 @@ determinerAndNounAgree(Determiner, _):-
 %     Determiner = none,
 %     Noun = none.
 
-% A rule that holds if the declension of an adjective matches that of the noun or there is no adjective.
+% A rule that holds if the declension of an adjective matches that of the noun, there is no adjective, or there is no noun (in which case the adjective is asumed to belong to the subject).
 adjectiveAndNounAgree(Adjective, Noun):-
     adjectiveDeclension(Adjective, Gender, Number),
     nounDeclension(Noun, Gender, Number).
 adjectiveAndNounAgree(Adjective, _):-
     Adjective = none.
-% adjectiveAndNounAgree(Adjective, Noun):-
+adjectiveAndNounAgree(Adjective, Noun):-
+    Noun = none.
 %     Adjective = none,
-%     Noun = none.
 
-% A rule that holds if there is one noun and no pronoun or no noun and one pronoun.
+% A rule that holds as long as there is not both a noun and a pronoun.
 nounAndPronounDontClash(Noun, Pronoun):-
     Pronoun = none,
     noun(Noun).
 nounAndPronounDontClash(Noun, Pronoun):-
     Noun = none,
     pronoun(Pronoun).
+nounAndPronounDontClash(Noun, Pronoun):-
+    Noun = none,
+    Pronoun = none.
 
 % A rule that holds if the pronoun is none or the preposition is a and the pronoun is mi or preposition is none and pronoun is yo. 
 pronounIsObliqueAfterPreposition(_, Pronoun):-
@@ -426,12 +492,26 @@ targetOfSentence(Sentence, Target, Value):-
     % Structure of nounPhraseLD: nounPhraseLD(NounPhrase, Preposition, Determiner, Pronoun, Adverb_before, Adjective_before, Noun, Adverb_after, Adjective_after)
     nounPhraseLD(NounPhraseOfVerbPhrase, none, none, none, none, Target, none, none, none),
     valueOfVerbAndAdverb(soy, Adverb_before, Value).
+targetOfSentence(Sentence, Target, Value):-
+    sentenceLD(Sentence, _, VerbPhrase),
+    verbPhraseLD(VerbPhrase, Adverb_before, me, considero, none, NounPhraseOfVerbPhrase),
+    % Structure of nounPhraseLD: nounPhraseLD(NounPhrase, Preposition, Determiner, Pronoun, Adverb_before, Adjective_before, Noun, Adverb_after, Adjective_after)
+    nounPhraseLD(NounPhraseOfVerbPhrase, none, none, none, none, Target, none, none, none),
+    valueOfVerbAndAdverb(considero, Adverb_before, Value).
 
-% The target is the infinitive if there is no noun phrase in the verb phrase
+% The target is the verb if there is no noun phrase in the verb phrase nor an infinitive.
+targetOfSentence(Sentence, Target, Value):-
+    sentenceLD(Sentence, _, VerbPhrase),
+    verbPhraseLD(VerbPhrase, Adverb_before, ReflexivePronoun, Target, none, [none, none, none, none, none, none, none, none]),
+    valueOfVerbAndAdverb(Target, Adverb_before, Value).
+
+% The target is the infinitive if there is no noun phrase in the verb phrase.
 targetOfSentence(Sentence, Target, Value):-
     sentenceLD(Sentence, _, VerbPhrase),
     verbPhraseLD(VerbPhrase, Adverb_before, ReflexivePronoun, Verb, Target, [none, none, none, none, none, none, none, none]),
     valueOfVerbAndAdverb(Verb, Adverb_before, Value).
+
+
 
 % The target is usually the noun of the noun phrase of the verb phrase otherwise.
 targetOfSentence(Sentence, Target, Value):-
@@ -651,6 +731,8 @@ process_sentence(Atoms) :-
     next_question(ExpectedTrait),
     sentence([], Atoms, NounPhrase, VerbPhrase),
     sentenceLD(SentenceLD, NounPhrase, VerbPhrase),
+    sentenceIsGrammatical(SentenceLD),
+
     targetOfSentence(SentenceLD, Target, Value),
     % Compare target found with trait expected.
     % Accepts synonyms and all declensions of both target and trait.
@@ -780,5 +862,8 @@ testTarget(Target, Value):-
     read_atoms(Atoms),
     sentence([], Atoms, NounPhrase, VerbPhrase),
     sentenceLD(SentenceLD, NounPhrase, VerbPhrase),
+    sentenceIsGrammatical(SentenceLD),
+
+
     targetOfSentence(SentenceLD, Target, Value).
 
