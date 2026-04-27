@@ -80,10 +80,10 @@ question(empatia, 'Te consideras empatico?').
 question(biologia, 'Te gusta la biologia?').
 question(disciplina, 'Te consideras disciplinado?').
 question(oido_musical, 'Te consideras alguien con oido musical?').
-question(creatividad, 'Te consideras alguien creativido?'). 
+question(creatividad, 'Te consideras alguien creativo?'). 
 question(armonia, 'Te consideras alguien que percibe la armonia musical?').
 question(dinero, 'Te consideras alguien que maneja bien el dinero?').
-question(estadistica, 'Te gusta la estadistica ?').
+question(estadistica, 'Te gusta la estadistica?').
 question(investigacion, 'Te gusta la investigacion?').
 question(diplomacia, 'Te consideras alguien capaz de estar en entornos donde se requiere de diplomacia?').
 question(pensamiento_critico, 'Te consideras alguien con pensamiento critico?').

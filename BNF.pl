@@ -36,16 +36,43 @@ verb(tengo, positive).
 verb(suelo, positive).
 verb(quiero, positive).
 
+verb(resuelvo, positive).
+
 verb(parece, positive).
 
 verb(oigo, positive).
 verb(escucho, positive).
 
-verb(disecar, positive).
-verb(operar, positive).
-verb(abrir, positive).
+verb(diseco, positive).
+verb(opero, positive).
+verb(abro, positive).
 
-verb(ordenar, positive).
+verb(ordeno, positive).
+
+verb(canto, positive).
+verb(toco, positive).
+
+verb(distingo, positive).
+verb(noto, positive).
+
+verb(manejo, positive).
+verb(administro, positive).
+verb(ahorro, positive).
+
+
+verb(se, positive). % de saber
+
+verb(relaciono, positive).
+
+verb(razono, positive).
+
+verb(adapto, positive).
+
+verb(limpio, positive).
+verb(organizo, positive).
+
+verb(leo, positive).
+
 
 
     % For copulative sentences, an adjective will be allowed as the first word in the noun phrase of the verb phrase.
@@ -58,6 +85,10 @@ adverb(siempre).
 adverb(generalmente).
 adverb(ocasionalmente).
 adverb(frecuentemente).
+adverb(seguido).
+adverb(facilmente).
+adverb(facil).
+adverb(bien).
 
 adverb(no).
 
@@ -78,6 +109,8 @@ determiner(el, masculine, singular).
 determiner(las, feminine, plural).
 determiner(los, masculine, plural).
 
+determiner(lo, masculine, singular). % no neutral gender.
+
 determiner(una, feminine, singular).
 determiner(un, masculine, singular).
 determiner(unas, feminine, plural).
@@ -97,7 +130,7 @@ noun(numero, numeros, masculine).
 noun(trigonometria, trigonometrias, feminine).
 noun(geometria, geometrias, feminine).
 noun(funcion, funciones, feminine).
-synonym([matematica, numero, resolver, resuelvo, trigonometria, geometria, funcion]).
+synonym([matematica, numero, resolver, resuelvo, trigonometria, geometria, funcion, problema]).
 % Synonyms can include words of other types like adjectives and infinitives.
 % Synonyms are defined by their first declension according to firstDeclension/2
 
@@ -134,10 +167,92 @@ noun(orden, ordenes, masculine).
 noun(aseo, aseos, masculine).
 noun(constancia, constancias, feminine).
 noun(perseverancia, perseverancia, masculine).
-synonym([disciplina, orden, aseo, constancia, perseverancia, disciplinado, ordenado, aseado, constante, perseverante, ordenar]).
+synonym([esforzado, organizar, organizo, organizado, disciplina, orden, aseo, constancia, perseverancia, disciplinado, ordenado, aseado, constante, perseverante, ordenar, ordeno]).
 
 
 synonym([escuchar, escucho, oir, oigo, atento]).
+
+% Disfrutas de resolver problemas?
+synonym([resolver, resuelvo, problema]).
+
+
+
+% Te consideras alguien con oido musical?
+noun(musica, musicas, feminine).
+noun(cancion, canciones, feminine).
+noun(instrumento, instrumentos, masculine).
+noun(oido, oidos, masculine).
+synonym([escuchar, escucho, musica, cancion, oir, oigo, musical, toco, tocar, instrumento, melodia, oido, oido_musical]).
+
+% Te consideras alguien creativo?
+noun(idea, ideas, feminine).
+noun(creatividad, creatividades, feminine).
+synonym([idea, crear, creativo, imaginativo, hacer, creatividad]).
+
+% Te consideras alguien que percibe la armonia musical?
+noun(armonia, armonias, feminine).
+noun(melodia, melodias, feminine).
+noun(nota, notas, feminine).
+synonym([escuchar, escucho, cancion, musica, musical, distinguir, distingo, notar, noto, nota, instrumento, melodia, oido, armonia]). % pero nota de nota musical xd.
+
+% Te consideras alguien que maneja bien el dinero?
+noun(dinero, dineros, masculine).
+noun(plata, platas, feminine).
+noun(valor, valores, masculine).
+noun(finanza, finanzas, feminine).
+noun(ahorro, ahorros, masculine).
+synonym([manejar, manejo, administrar, administro, plata, valor, ahorro, finanza, dinero]).
+
+% Te gusta la estadistica?
+noun(estadistica, estadisticas, feminine).
+synonym([matematica, numero, estadistica]).
+
+% Te gusta la investigacion?
+noun(investigacion, investigaciones, feminine).
+noun(ciencia, ciencias, feminine).
+synonym([ciencia, investigar, investigacion]).
+
+% Te consideras alguien capaz de estar en entornos donde se requiere de diplomacia?
+noun(diplomacia, diplomacias, feminine).
+noun(relacion, relaciones, feminine).
+synonym([relacion, relaciono, relacionar, diplomatico, diplomacia]).
+
+% Te consideras alguien con pensamiento critico?
+noun(pensamiento, pensamientos, masculine).
+noun(objetividad, objetividades, feminine).
+synonym([pensamiento, objetividad, objetivo, critico, racional, razono, razonar, pensamiento_critico]).
+
+% Te consideras alguien con una etica fuerte?
+noun(etica, eticas, feminine).
+noun(integridad, integridades, feminine).
+noun(honestidad, honestidades, feminine).
+synonym([persona, correcto, objetividad, objetivo, integridad, integro, honesto, honestidad, etica]).
+
+% Crees que eres alguien paciente?
+noun(paciencia, paciencias, feminine).
+noun(tiempo, tiempos, masculine).
+synonym([tiempo, paciente, paciencia]).
+
+% Te resulta fácil adaptarte a diferentes escenarios?
+noun(escenario, escenarios, masculine).
+noun(adaptacion, adaptaciones, feminine).
+noun(adaptabilidad, adaptabilidades, feminine).
+synonym([escenario, adaptacion, adaptable, adapto, adaptar, adaptabilidad]).
+
+% Eres ordenado?
+noun(orden, ordenes, masculine).
+noun(limpieza, limpiezas, feminine).
+synonym([organizar, organizo, organizado, aseado, limpiar, limpio, limpieza, ordenar, ordeno, ordenado, orden]).
+
+% Te gusta la lectura?
+noun(libro, libros, masculine).
+noun(novela, novelas, feminine).
+noun(historia, historias, feminine).
+noun(lectura, lecturas, feminine).
+synonym([libro, novela, historia, culto, leer, leo, lectura]).
+
+
+
 
 % synonym([escuchar, escucho, oir, oigo, atento]).
 
@@ -160,6 +275,37 @@ infinitive(ser).
 infinitive(tener).
 infinitive(parecer).
 
+infinitive(disecar).
+infinitive(operar).
+infinitive(abrir).
+
+infinitive(cantar).
+infinitive(tocar).
+
+infinitive(crear).
+
+infinitive(distinguir).
+infinitive(notar).
+
+infinitive(manejar).
+infinitive(administar).
+infinitive(ahorrar).
+
+infinitive(investigar).
+
+infinitive(relacionar).
+
+infinitive(razonar).
+
+infinitive(adaptar).
+
+infinitive(limpiar).
+infinitive(ordenar).
+infinitive(organizar).
+
+infinitive(leer).
+
+
 
 
 % If a verb phrase with a verb that contains an infinitive does not have a noun phrase, then the infinitive must be the target.
@@ -178,7 +324,38 @@ adjective(disciplinado, disciplinada, disciplinados, disciplinadas).
 adjective(ordenado, ordenada, ordenados, ordenadas).
 adjective(aseado, aseada, aseados, aseadas).
 adjective(constante, constante, constantes, constantes).
-adjective(perseverante, constante, constantes, constantes).
+adjective(perseverante, perseverante, perseverantes, perseverantes).
+
+adjective(musical, musical, musicales, musicales).
+
+adjective(creativo, creativa, creativos, creativas).
+adjective(imaginativo, imaginativa, imaginativos, imaginativas).
+
+adjective(ahorrador, ahorradora, ahorradores, ahorradoras).
+
+adjective(diplomatico, diplomatica, diplomaticos, diplomaticas).
+
+adjective(objetivo, objetiva, objetivos, objetivas).
+adjective(critico, critica, criticos, criticas).
+adjective(racional, racional, racionales, racionales).
+
+adjective(correcto, correcta, correctos, correctas).
+adjective(integro, integra, integros, integras).
+adjective(honesto, honesta, honestos, honestas).
+
+adjective(paciente, paciente, pacientes, pacientes).
+
+adjective(adaptable, adaptable, adaptables, adaptables).
+
+adjective(esforzado, esforzada, esforzados, esforzadas).
+adjective(organizado, organizada, organizados, organizadas).
+adjective(limpio, limpia, limpios, limpias).
+
+adjective(culto, culta, cultos, cultas).
+
+traitAtom(oido_musical).
+traitAtom(pensamiento_critico).
+
 
 
 % Rule to get the declension of any noun.
@@ -203,6 +380,12 @@ firstDeclension(Word, Word):-
 % Nondeclinable words: WordFirst is itself.
 firstDeclension(Word, Word):-
     infinitive(Word).
+% Verbs are related to themselves
+firstDeclension(Word, Word):-
+    verb(Word, _).
+% special case for trait atoms
+firstDeclension(Word, Word):-
+    traitAtom(Word).
 
 % Relates a word to any of its synonyms.
 % A word is a synonym of itself.
