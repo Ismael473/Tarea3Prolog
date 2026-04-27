@@ -1,5 +1,6 @@
 :- dynamic answer/2.
 
+%carreras son 10
 career(ingenieria_computadores).
 career(psicologia).
 career(medicina).
@@ -12,6 +13,7 @@ career(relaciones_internacionales).
 career(administracion).
 career(bibliotecologia).
 
+%affinidades por carrera, cada carrera posee 3
 affinity(ingenieria_computadores, matematicas).
 affinity(ingenieria_computadores, tecnologia).
 affinity(ingenieria_computadores, problemas).
@@ -56,7 +58,7 @@ affinity(bibliotecologia, lectura).
 affinity(bibliotecologia, investigacion).
 affinity(bibliotecologia, orden).
 
-
+%antagonistas por carrera, cada carrera posee 1
 antagonism(ingenieria_computadores, personas).
 antagonism(psicologia, matematicas).
 antagonism(medicina, tecnologia).
@@ -68,6 +70,7 @@ antagonism(docente, armonia).
 antagonism(relaciones_internacionales, creatividad).
 antagonism(bibliotecologia, diplomacia).
 
+%preguntas por afinidad cada afinidad tiene 1 pregunta
 question(matematicas, 'Te gustan las matematicas?').
 question(tecnologia, 'Te gusta la tecnologia?').
 question(problemas, 'Disfrutas de resolver problemas?').
