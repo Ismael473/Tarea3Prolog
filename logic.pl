@@ -2,6 +2,7 @@
 % :- consult('BNF.pl').
 
 start :-
+	write("Hola, se que la tarea de buscar una carrera es dificil. Estamos aqui para ayudarte!"), nl,
     retractall(answer(_,_)),
     ask_next.
 	
@@ -72,7 +73,7 @@ ask_next :-
 
 ask_next :-
     \+ next_question(_),
-    recommend.
+	recommend.
 
 /*
 Recomendación final
